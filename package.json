@@ -1,0 +1,29 @@
+{
+  "name": "petclinic-modular-monolith",
+  "version": "1.0.0",
+  "description": "Project for study Modular Monolith Architecture.",
+  "homepage": "https://github.com/vicentejuniordev/PetClinic-Modular-Monolith#readme",
+  "bugs": {
+    "url": "https://github.com/vicentejuniordev/PetClinic-Modular-Monolith/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vicentejuniordev/PetClinic-Modular-Monolith.git"
+  },
+  "private":true,
+  "license": "ISC",
+  "author": "Vicente Junior",
+  "type": "module",
+  "main": "index.js",
+  "engines": {
+    "node": ">= 18.x <= 24.x"
+  },
+  "packageManager": "npm@11.6.2",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    
+  }
+}
