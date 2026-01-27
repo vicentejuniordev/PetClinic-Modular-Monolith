@@ -1,9 +1,10 @@
 import { createApp } from "vue";
 import App from "~/App.vue";
 import "./global.css"
+import router from "~/router";
 
 const app = createApp(App);
-
-app.mount('#app')
+app.use(router);
+app.mount('#app');
 
 export default app
