@@ -1,0 +1,27 @@
+{
+  "name": "@petclinic/frontend",
+  "version": "1.0.0",
+  "description": "UI PetClinic",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "dev": "vite",
+    "bulid":"vite build"
+  },
+  "dependencies": {
+    "vue": "^3.5.27",
+    "vue-router": "^4.6.4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.3",
+    "@vue/tsconfig": "^0.8.1",
+    "autoprefixer": "^10.4.23",
+    "postcss": "^8.5.6",
+    "rimraf": "^6.1.2",
+    "tailwind": "^4.0.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vite-tsconfig-paths": "^6.0.5"
+  }
+}

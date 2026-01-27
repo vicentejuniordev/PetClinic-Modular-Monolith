@@ -1,0 +1,15 @@
+{
+    "extends": ["@vue/tsconfig/tsconfig.dom.json"], // Extende de um arquivo padrão que já vem com algumas configurações
+    "include": ["src", "src/**/*.vue"], // Inclui todos os arquivos que estão dentro da pasta src
+    "compilerOptions": {
+        "allowJs": true, // Permite integrações e permiti que arquivos .vue sejam vistos
+        "baseUrl": "./",
+        "composite": true,
+        "paths": {
+            "~/*": ["./src/*"] // Adiciona um caminho relativo na aplicação
+        },
+
+        "types": ["vite/client"] // Vite reconhecer no modo server e evitar alguns erros do TypeScript
+    },
+    "exclude": ["node_modules", "dist/"] // Exclui as pastas que o tsconfig não precisa interpretar
+}
