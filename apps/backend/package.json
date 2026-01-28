@@ -1,0 +1,29 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "PetClinic API",
+  "main": "index.js",
+  "scripts": {
+    "dev":"vite",
+    "clear":"rimraf dist",
+    "build":"vite build"
+  },
+  "type": "module",
+  "dependencies": {
+    "@koa/bodyparser": "^6.1.0",
+    "dotenv": "^17.2.3",
+    "koa": "^3.1.1",
+    "koa-router": "^14.0.0"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.15.11",
+    "@types/koa": "^3.0.1",
+    "@types/koa-router": "^7.4.9",
+    "@types/node": "^25.0.10",
+    "rimraf": "^6.1.2",
+    "typescript": "^5.9.3",
+    "vite": "^7.3.1",
+    "vite-plugin-node": "^7.0.0",
+    "vite-tsconfig-paths": "^6.0.5"
+  }
+}
