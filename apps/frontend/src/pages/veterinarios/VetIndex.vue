@@ -1,15 +1,8 @@
 <script setup lang="ts">
 import NavBar from "~/components/NavBar.vue";
- type Vet ={
-    id: string,
-    nome:string,
-    especialidade:string[]
- }
-
- defineProps<{
-    data: Array<Vet>
- }>();
-
+import type { Vet } from "@petclinic/vet";
+import getVets from "./vet";
+ const vets =  getVets();
 </script>
 
 <template>
@@ -18,7 +11,7 @@ import NavBar from "~/components/NavBar.vue";
         <div class="w-">
             <h1 class="text-blue-900 align-text-top mt-10 mb-3 font-bold">Veterinários</h1>
 
-            <table class="w-full">
+            <table v-bind:data="vets.data" class="w-full">
                 <thead>
                     <tr class="bg-blue-800 text-left text-white">
                         <th class="p-2 text-white font-bold">Nome</th>
@@ -26,9 +19,9 @@ import NavBar from "~/components/NavBar.vue";
                     </tr>
                 </thead>
                 <tbody>
-                    <tr v-for="vet in data" :key="vet.id">
-                        <td class="p-2">{{ vet.nome }}</td>
-                        <td class="p-2">{{ vet.especialidade.join(', ') }}</td>
+                    <tr v-for="vet in vets.data" :key="vet.id">
+                        <td class="p-2">{{ vet.name }}</td>
+                        <td class="p-2">{{ vet.specialty }}</td>
                     </tr>
                 </tbody>
             </table>

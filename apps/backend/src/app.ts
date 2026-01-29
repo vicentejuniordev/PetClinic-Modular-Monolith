@@ -1,9 +1,12 @@
 import Koa, { Context } from 'koa';
 import { bodyParser } from '@koa/bodyparser';
 import {description, version} from '../package.json'
-
+import mainRouter from './routes';
 
 const app = new Koa();
+
+app.use(mainRouter.routes());
+app.use(mainRouter.allowedMethods());
 
 app.use(bodyParser({encoding: 'utf-8'}));
 
