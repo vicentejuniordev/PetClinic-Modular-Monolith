@@ -1,6 +1,8 @@
 <script setup lang='ts'>
+import NavBar from '~/components/NavBar.vue';
 </script>
 
 <template>
-    <h1>PetClinic</h1>
+    <NavBar/>
+    <h1 >PetClinic</h1>
 </template>
