@@ -1,5 +1,15 @@
 <script setup lang="ts">
 import NavBar from "~/components/NavBar.vue";
+ type Vet ={
+    id: string,
+    nome:string,
+    especialidade:string[]
+ }
+
+ defineProps<{
+    data: Array<Vet>
+ }>();
+
 </script>
 
 <template>
@@ -16,9 +26,9 @@ import NavBar from "~/components/NavBar.vue";
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td class="p-2">Dr.Junior</td>
-                        <td class="p-2">Cardiologista</td>
+                    <tr v-for="vet in data" :key="vet.id">
+                        <td class="p-2">{{ vet.nome }}</td>
+                        <td class="p-2">{{ vet.especialidade.join(', ') }}</td>
                     </tr>
                 </tbody>
             </table>

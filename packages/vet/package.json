@@ -1,0 +1,28 @@
+
+{
+  "name": "@petclinic/vet",
+  "version": "1.0.0",
+  "description": "Modulo de Veterinarios",
+  "main": "index.js",
+  "scripts": {
+    "clean": "rimraf dist",
+    "dev": "tsup --watch",
+    "build": "tsup"
+  },
+  "type": "module",
+  "private": true,
+  "types": "./dist/index.d.ts",
+  "dependencies": {
+    "valibot": "^1.2.0"
+  },
+  "devDependencies": {
+    "rimraf": "^6.1.2",
+    "tsup": "^8.5.1",
+    "typescript": "^5.9.3"
+  },
+  "exports":{
+    "import": "./dist/index.js",
+    "require": "./dist/index.js"
+  },
+  "files": ["./dist"]
+}

@@ -3,6 +3,9 @@
     methods: {
         irParaVet(){
             this.$router.push('/vet')
+        },
+        irParaHome(){
+            this.$router.push('/')
         }
     }
  }
@@ -14,7 +17,7 @@
             <h1 class="text-2xl font-bold text-white ">PetClinic</h1>
         </div>
        <div class="flex flex-row mr-20 text-xl  font-medium text-white content between gap-8" >
-        <p class="cursor-pointer" >Home</p>
+        <p class="cursor-pointer" @click="irParaHome" >Home</p>
         <p class="cursor-pointer" @click="irParaVet" >Veterinários</p>
         <p class="cursor-pointer" >Atendimentos</p>
         <p class="cursor-pointer" >Pets</p>
