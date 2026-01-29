@@ -4,5 +4,4 @@ import NavBar from '~/components/NavBar.vue';
 
 <template>
     <NavBar/>
-    <h1 >PetClinic</h1>
 </template>
