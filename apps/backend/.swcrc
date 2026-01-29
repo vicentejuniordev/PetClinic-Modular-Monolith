@@ -1,0 +1,28 @@
+{
+  "$schema": "https://swc.rs/schema.json",
+  "jsc": {
+    "baseUrl": ".",
+    "transform": {},
+    "target": "esnext",
+    "externalHelpers": true,
+    "keepClassNames": true,
+
+    "parser": {
+        "syntax": "typescript",
+        "dynamicImport": true
+    },
+
+    "paths": {
+        "~/*":["./src/*"]
+    }
+  },
+  "isModule": true,
+  "module":{
+    "type": "es6"
+  },
+  "minify": false,
+  "exclude":[
+    "dist",
+    "node_modules"
+]
+}
